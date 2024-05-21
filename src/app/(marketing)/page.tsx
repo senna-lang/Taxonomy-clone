@@ -38,6 +38,7 @@ const page = () => {
           </div>
         </div>
       </section>
+
       <section id="features" className=" container space-y-6">
         <div className="grid grid-cols-1  gap-8 md:grid-cols-2">
           <div>
@@ -220,6 +221,22 @@ const page = () => {
           <p className=" text-muted-foreground sm:text-lg sm:leading-7">
             Post Writerはログインするとブログ投稿ができるようになります。
           </p>
+        </div>
+      </section>
+
+      <section id="contact" className=" container py-8 md:py-12 lg:py-24">
+        <div className=" max-w-[58rem] mx-auto text-center flex flex-col gap-4">
+          <h2 className=" font-extrabold text-3xl mb:text-lg sm:leading-7">
+            Contact me
+          </h2>
+          <Link
+            href={siteConfig.links.x}
+            className=" text-muted-foreground underline underline-offset-2"
+            target="_blank"
+            rel="noreferrer"
+          >
+            ご連絡はXのDMでお待ちしております。
+          </Link>
         </div>
       </section>
     </div>
