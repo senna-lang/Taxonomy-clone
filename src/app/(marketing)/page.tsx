@@ -39,7 +39,7 @@ const page = () => {
         </div>
       </section>
       <section id="features" className=" container space-y-6">
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
+        <div className="grid grid-cols-1  gap-8 md:grid-cols-2">
           <div>
             <h2 className="text-2xl font-bold">特徴</h2>
             <ul className="mt-4 space-y-4">
@@ -88,7 +88,7 @@ const page = () => {
             />
           </div>
         </div>
-        <div className=" grid sm:grid-cols-2 md:grid-cols-3 gap-4">
+        <div className=" mx-auto grid sm:grid-cols-2 md:grid-cols-3 gap-4 max-w-[64rem]">
           <div className=" bg-background border p-2 rounded-lg">
             <div className=" flex flex-col p-6 h-[160px]">
               <svg
@@ -104,7 +104,9 @@ const page = () => {
               </svg>
               <div className=" space-y-2">
                 <h3 className=" font-bold">Next.js</h3>
-                <p className=" text-sm text-muted-foreground">AppRouter/Layouts/APIRoutes</p>
+                <p className=" text-sm text-muted-foreground">
+                  AppRouter/Layouts/APIRoutes
+                </p>
               </div>
             </div>
           </div>
@@ -123,7 +125,9 @@ const page = () => {
               </svg>
               <div className=" space-y-2">
                 <h3 className=" font-bold">Next.js</h3>
-                <p className=" text-sm text-muted-foreground">AppRouter/Layouts/APIRoutes</p>
+                <p className=" text-sm text-muted-foreground">
+                  AppRouter/Layouts/APIRoutes
+                </p>
               </div>
             </div>
           </div>
@@ -142,7 +146,9 @@ const page = () => {
               </svg>
               <div className=" space-y-2">
                 <h3 className=" font-bold">Next.js</h3>
-                <p className=" text-sm text-muted-foreground">AppRouter/Layouts/APIRoutes</p>
+                <p className=" text-sm text-muted-foreground">
+                  AppRouter/Layouts/APIRoutes
+                </p>
               </div>
             </div>
           </div>
@@ -161,7 +167,9 @@ const page = () => {
               </svg>
               <div className=" space-y-2">
                 <h3 className=" font-bold">Next.js</h3>
-                <p className=" text-sm text-muted-foreground">AppRouter/Layouts/APIRoutes</p>
+                <p className=" text-sm text-muted-foreground">
+                  AppRouter/Layouts/APIRoutes
+                </p>
               </div>
             </div>
           </div>
@@ -180,7 +188,9 @@ const page = () => {
               </svg>
               <div className=" space-y-2">
                 <h3 className=" font-bold">Next.js</h3>
-                <p className=" text-sm text-muted-foreground">AppRouter/Layouts/APIRoutes</p>
+                <p className=" text-sm text-muted-foreground">
+                  AppRouter/Layouts/APIRoutes
+                </p>
               </div>
             </div>
           </div>
@@ -199,10 +209,17 @@ const page = () => {
               </svg>
               <div className=" space-y-2">
                 <h3 className=" font-bold">Next.js</h3>
-                <p className=" text-sm text-muted-foreground">AppRouter/Layouts/APIRoutes</p>
+                <p className=" text-sm text-muted-foreground">
+                  AppRouter/Layouts/APIRoutes
+                </p>
               </div>
             </div>
           </div>
+        </div>
+        <div className=" mx-auto md:max-[58rem] text-center">
+          <p className=" text-muted-foreground sm:text-lg sm:leading-7">
+            Post Writerはログインするとブログ投稿ができるようになります。
+          </p>
         </div>
       </section>
     </div>
