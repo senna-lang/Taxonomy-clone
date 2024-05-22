@@ -27,6 +27,7 @@ export const metadata: Metadata = {
     title: siteConfig.name,
     description: siteConfig.description,
   },
+  metadataBase:new URL(siteConfig.url),
   twitter: {
     card: "summary_large_image",
     title: siteConfig.name,
