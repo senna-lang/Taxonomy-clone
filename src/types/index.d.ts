@@ -1,3 +1,5 @@
+
+
 export type SiteConfig = {
   name: string;
   description: string;
@@ -14,6 +16,26 @@ export type NavItem = {
   href: string;
   disabled?: boolean;
 };
+
+export type SidebarItem = {
+  title: string;
+  disabled?: boolean;
+  external?: boolean;
+} & (
+  | {
+      href: string;
+      items?: never;
+    }
+  | {
+    href?: string;
+    items:NavItem[]
+    }
+);
+
+export type DashboardConfig = {
+  mainNav: NavItem[];
+  sidebar: SidebarItem[];
+}
 
 export type MarketingConfig = {
   mainNav: NavItem[];
