@@ -1,5 +1,3 @@
-
-
 export type SiteConfig = {
   name: string;
   description: string;
@@ -27,16 +25,24 @@ export type SidebarItem = {
       items?: never;
     }
   | {
-    href?: string;
-    items:NavItem[]
+      href?: string;
+      items: NavItem[];
     }
 );
 
 export type DashboardConfig = {
   mainNav: NavItem[];
   sidebar: SidebarItem[];
-}
+};
 
 export type MarketingConfig = {
   mainNav: NavItem[];
+};
+
+export type Post = {
+  title: string;
+  description?: string;
+  date: string;
+  published: string;
+  image: string;
 };
