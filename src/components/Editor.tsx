@@ -1,31 +1,50 @@
 "use client";
 import { cn } from "@/lib/utils";
 import EditorJS from "@editorjs/editorjs";
+import Header from "@editorjs/header";
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import TextareaAutoSize from "react-textarea-autosize";
 import { buttonVariants } from "./ui/button";
 
-const Editor = () => {
+interface EditorProps {
+  title: string;
+}
+
+const Editor = ({ title }: EditorProps) => {
+  const ref = useRef<EditorJS>();
   const [isMounted, setIsMounted] = useState<boolean>(false);
-  const initialEditor = () => {
+  const initialEditor = useCallback(() => {
     const editor = new EditorJS({
       holder: "editor",
+      onReady() {
+        ref.current = editor;
+      },
       placeholder: "ここに記事を書く",
       inlineToolbar: true,
+      tools: {
+        header: Header,
+      },
     });
-  };
+  }, []);
 
   useEffect(() => {
     if (typeof window !== "undefined") {
       setIsMounted(true);
     }
-  },[]);
+  }, []);
 
   useEffect(() => {
     if (isMounted) {
       initialEditor();
     }
+
+    return () => {
+      if (ref.current) {
+        ref.current.destroy();
+        ref.current = undefined;
+      }
+    };
   }, [isMounted]);
 
   return (
