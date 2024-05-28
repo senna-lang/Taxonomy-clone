@@ -14,7 +14,7 @@ export default function Dashboard() {
       {posts.map(post => (
         <div className="flex flex-col space-y-1 ">
           <div className=" border border-muted-foreground border-dashed rounded-md">
-            <PostItem key={post.slug} post={post} />
+            <PostItem key={post.slug} post={post} slug={post.slug}/>
           </div>
         </div>
       ))}

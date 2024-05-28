@@ -4,14 +4,16 @@ import Link from "next/link";
 
 interface PostItemProps {
   post: Pick<Post, "title" | "description" | "date">;
+  slug: string;
 }
 
-const PostItem = ({ post }: PostItemProps) => {
+const PostItem = ({ post, slug }: PostItemProps) => {
+  const test = slug.split("/");
   return (
     <div className=" flex items-center justify-between p-4">
       <div className="grid gap-1">
         <Link
-          href={`/editor/${post.title}`}
+          href={`/editor/${test[test.length - 1]}`}
           className=" font-semibold hover:underline"
         >
           {post.title}

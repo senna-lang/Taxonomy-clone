@@ -8,10 +8,11 @@ import TextareaAutoSize from "react-textarea-autosize";
 import { buttonVariants } from "./ui/button";
 
 interface EditorProps {
-  title: string;
+  title?: string;
+  content?:string
 }
 
-const Editor = ({ title }: EditorProps) => {
+const Editor = ({ title,content }: EditorProps) => {
   const ref = useRef<EditorJS>();
   const [isMounted, setIsMounted] = useState<boolean>(false);
   const initialEditor = useCallback(() => {
@@ -68,6 +69,7 @@ const Editor = ({ title }: EditorProps) => {
           <TextareaAutoSize
             id="title"
             autoFocus
+            defaultValue={title}
             placeholder="Post Title"
             className="w-full resize-none overflow-hidden bg-transparent text-5xl focus:outline-none font-bold"
           />
